@@ -26,8 +26,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:ems="10"
-            android:hint="username"
-            android:inputType="textPersonName" />
+            android:hint="@string/button_login"
+            android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/PasswordInput"
@@ -35,8 +35,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:ems="10"
-            android:hint="Mot de passe"
-            android:inputType="textPersonName"
+            android:hint="@string/mdp"
+            android:inputType="textPassword"
 
             />
 
@@ -45,7 +45,7 @@
             android:layout_width="319dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Login" />
+            android:text="@string/button_login" />
     </LinearLayout>
 
     <LinearLayout
@@ -65,6 +65,6 @@
             android:layout_height="43dp"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:text="TextView" />
+            android:text="@string/dont_have_account" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

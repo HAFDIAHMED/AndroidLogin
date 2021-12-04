@@ -3,4 +3,9 @@
     <string name="see_app">see the login app</string>
     <string name="login_page">Login Page</string>
     <string name="register_page">Register Page</string>
+    <string name="user_name">username</string>
+    <string name="mdp">mot de passe</string>
+    <string name="button_login">LOGIN</string>
+    <string name="dont_have_account">You dont have an account ?</string>
+    <string name="register_text">Register</string>
 </resources>
