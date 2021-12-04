@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     TextView CounterText;
     //public String url = "https://reqres.in/api/users/2";
     TextView TextApi ;
+    String getdata="data get";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         see_app = findViewById(R.id.button2);
         api_result_button=findViewById(R.id.apibutton);
         CounterText = findViewById(R.id.textcountr);
+        TextApi=findViewById(R.id.textApi);
         see_app.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,9 +61,11 @@ public class MainActivity extends AppCompatActivity {
         api_result_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                TextApi.setText(getdata);
 
             }
         });
+
         //make a client
         OkHttpClient client = new OkHttpClient();
         //get request
@@ -82,6 +86,9 @@ public class MainActivity extends AppCompatActivity {
                          throw new IOException("unexpected code "+response);
                      }
                      Log.i("data with get",responseBody.string());
+                     getdata=responseBody.string();
+                     TextApi.setText(getdata);
+
                 }catch(Exception e){
                     e.printStackTrace();
                 }
