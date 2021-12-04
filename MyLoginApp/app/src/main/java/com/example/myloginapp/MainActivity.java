@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     int counter = 0;
     TextView CounterText;
     //public String url = "https://reqres.in/api/users/2";
-    //TextView TextApi = (TextView) findViewById(R.id.textApi);
+    TextView TextApi ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         OkHttpClient client = new OkHttpClient();
-
+        TextApi = findViewById(R.id.textApi);
         // GET
         Request get = new Request.Builder()
                 .url("https://reqres.in/api/users?page=2")
@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     Log.i("data", responseBody.string());
+                    TextApi.setText(responseBody.string());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
