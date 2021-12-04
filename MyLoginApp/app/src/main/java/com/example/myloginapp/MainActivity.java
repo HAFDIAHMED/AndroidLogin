@@ -45,7 +45,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //GET with okhttp
-        Request get = new Request.Builder().url("")
+        Request get = new Request.Builder().url("https://reqres.in/api/users?page=2").build();
+        client.newCall(get).enqueue(new Callback(){
+
+        });
 
 
 
