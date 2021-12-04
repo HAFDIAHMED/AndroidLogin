@@ -6,4 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".authentification.RegisterActivity">
 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="409dp"
+        android:layout_height="276dp"
+
+
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+
+        <EditText
+            android:id="@+id/UsernameInput"
+            android:layout_width="367dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/user_name"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/PasswordInput"
+            android:layout_width="367dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/mdp"
+            android:inputType="textPassword"
+
+            />
+        <EditText
+            android:id="@+id/PasswordInput2"
+            android:layout_width="367dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/mdp"
+            android:inputType="textPassword"
+
+            />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="319dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/button_register" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

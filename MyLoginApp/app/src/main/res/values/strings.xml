@@ -6,6 +6,7 @@
     <string name="user_name">Username</string>
     <string name="mdp">Mot de passe</string>
     <string name="button_login">LOGIN</string>
+    <string name="button_register">REGISTER</string>
     <string name="dont_have_account">You dont have an account ?</string>
     <string name="register_text">Register</string>
 
