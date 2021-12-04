@@ -21,8 +21,10 @@ import java.io.IOException;
 
 import okhttp3.Call;
 import okhttp3.Callback;
+import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 import com.google.gson.JsonObject;
@@ -88,6 +90,14 @@ public class MainActivity extends AppCompatActivity {
         //Post Data
         JsonObject postData = new JsonObject();
         postData.addProperty("name", "morpheus");
+        postData.addProperty("job","leader");
+        final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+        RequestBody postBody = RequestBody.create(JSON,postData.toString());
+        Request post= new Request.Builder()
+                .url("https://reqres.in/api/users")
+                .post(postBody)
+                .build();
+        
 
 
 
