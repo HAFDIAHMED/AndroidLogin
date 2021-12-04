@@ -38,7 +38,9 @@ public class MainActivity extends AppCompatActivity {
         //create a http client
         OkHttpClient client = new OkHttpClient();
         TextView api_result_text=(TextView)findViewById(R.id.textApi);
-        
+        String url= "https://reqres.in/api/users/2";
+        //create an http handler
+
 
     }
 }
