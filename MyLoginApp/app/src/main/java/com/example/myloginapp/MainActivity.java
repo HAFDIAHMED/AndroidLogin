@@ -18,10 +18,12 @@ public class MainActivity extends AppCompatActivity {
     Button see_app;
     int counter=0;
     TextView CounterText;
+    OkHttpClient client = new OkHttpClient();
+    public String url= "https://reqres.in/api/users/2";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        String url= "https://reqres.in/api/users/2";
 
         setContentView(R.layout.activity_main);
         see_app = findViewById(R.id.button2);
@@ -36,14 +38,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        //Api features
-        //create a http client
-        OkHttpClient client = new OkHttpClient();
-        TextView api_result_text=(TextView)findViewById(R.id.textApi);
-        //create an http handler
-        OkHttpHandler okHttpHandler= new OkHttpHandler();
-        okHttpHandler.execute(url);
+
 
 
     }
+    public class OkHttpHandler
 }
