@@ -28,14 +28,14 @@ public class MainActivity extends AppCompatActivity {
     int counter = 0;
     TextView CounterText;
     //public String url = "https://reqres.in/api/users/2";
-    TextView TextApi = (TextView) findViewById(R.id.textApi);
+    //TextView TextApi = (TextView) findViewById(R.id.textApi);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        OkHttpClient client = new OkHttpClient();
+        //OkHttpClient client = new OkHttpClient();
 
         see_app = findViewById(R.id.button2);
         CounterText = findViewById(R.id.textcountr);
