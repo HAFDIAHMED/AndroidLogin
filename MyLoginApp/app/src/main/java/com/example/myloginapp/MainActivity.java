@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     Button see_app;
     int counter = 0;
     TextView CounterText;
-    OkHttpClient client = new OkHttpClient();
     public String url = "https://reqres.in/api/users/2";
     TextView TextApi = (TextView) findViewById(R.id.textApi);
 
@@ -36,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+        OkHttpClient client = new OkHttpClient();
+
         see_app = findViewById(R.id.button2);
         CounterText = findViewById(R.id.textcountr);
         see_app.setOnClickListener(new View.OnClickListener() {
@@ -45,31 +46,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(SeeApp);
                 //counter=counter +1;
                 //CounterText.setText(Integer.toString(counter));
-                //GET with okhttp
-                Request get = new Request.Builder().url("https://reqres.in/api/users?page=2").build();
-                client.newCall(get).enqueue(new Callback() {
-                    @Override
-                    public void onFailure(Call call, IOException e) {
-                        e.printStackTrace();
-                    }
-
-                    @Override
-                    public void onResponse(Call call, Response response) {
-                        try {
-                            ResponseBody responseBody = response.body();
-                            if (!response.isSuccessful()) {
-                                throw new IOException("Unexpected code " + response);
-                            }
-
-                            Log.i("data", ((ResponseBody) responseBody).string());
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                });
 
             }
         });
+        
+
 
 
 
