@@ -10,10 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLoginApp">
         <activity
+            android:name=".authentification.RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".authentification.LoginActicity"
             android:exported="false"
-            android:label="@string/login_page"
-            />
+            android:label="@string/login_page" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
