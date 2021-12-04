@@ -57,36 +57,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-        OkHttpClient client = new OkHttpClient();
-        TextApi = findViewById(R.id.textApi);
-        // GET
+        //get request
         Request get = new Request.Builder()
-                .url("https://reqres.in/api/users?page=2")
-                .build();
+                .url("")
 
-        client.newCall(get).enqueue(new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                e.printStackTrace();
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) {
-                try {
-                    ResponseBody responseBody = response.body();
-                    if (!response.isSuccessful()) {
-                        throw new IOException("Unexpected code " + response);
-                    }
-
-                    Log.i("data", responseBody.string());
-                    TextApi.setText(responseBody.string());
-                    Toast.makeText(MainActivity.this, "heloo", Toast.LENGTH_SHORT).show();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
 
 
 
