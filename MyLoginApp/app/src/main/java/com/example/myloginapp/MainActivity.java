@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     Button see_app;
     int counter = 0;
     TextView CounterText;
-    //OkHttpClient client = new OkHttpClient();
+    OkHttpClient client = new OkHttpClient();
     public String url = "https://reqres.in/api/users/2";
     TextView TextApi = (TextView) findViewById(R.id.textApi);
 
@@ -44,24 +44,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        //OkHttpClient client = new OkHttpClient();
+        //GET with okhttp
+        Request get = new Request.Builder().url("")
 
-        TextApi.setText(run(url));
-
-
-    }
-
-    final OkHttpClient client = new OkHttpClient();
-
-    String run(String url) throws IOException {
-        Request request = new Request.Builder()
-                .url(url)
-                .build();
-
-        try (Response response = client.newCall(request).execute()) {
-            return response.body().string();
-        }
 
 
     }
+
+
+
+
 }
