@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.myloginapp.authentification.LoginActicity;
 
@@ -24,7 +25,7 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 public class MainActivity extends AppCompatActivity {
-    Button see_app;
+    Button see_app,api_result_button;
     int counter = 0;
     TextView CounterText;
     //public String url = "https://reqres.in/api/users/2";
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         //OkHttpClient client = new OkHttpClient();
 
         see_app = findViewById(R.id.button2);
+        api_result_button=findViewById(R.id.apibutton);
         CounterText = findViewById(R.id.textcountr);
         see_app.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +51,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        api_result_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
         OkHttpClient client = new OkHttpClient();
         TextApi = findViewById(R.id.textApi);
         // GET
@@ -72,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
                     Log.i("data", responseBody.string());
                     TextApi.setText(responseBody.string());
+                    Toast.makeText(MainActivity.this, "heloo", Toast.LENGTH_SHORT).show();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
