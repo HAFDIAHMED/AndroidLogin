@@ -22,6 +22,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:text="Button" />
+            android:text="@string/see_app" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
