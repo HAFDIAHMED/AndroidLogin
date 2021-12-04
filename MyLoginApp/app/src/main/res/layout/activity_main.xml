@@ -14,6 +14,7 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.369"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="2dp">
 
@@ -24,6 +25,12 @@
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:text="@string/see_app" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="api results" />
     </LinearLayout>
 
     <TextView
