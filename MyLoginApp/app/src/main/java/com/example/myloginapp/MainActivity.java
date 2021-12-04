@@ -85,9 +85,11 @@ public class MainActivity extends AppCompatActivity {
                      if(!response.isSuccessful()){
                          throw new IOException("unexpected code "+response);
                      }
-                     Log.i("data with get",responseBody.string());
+
+
+                    Log.i("data with get",responseBody.string());
                      getdata=responseBody.string();
-                     TextApi.setText(responseBody.string());
+                     TextApi.setText(getdata);
                      Log.i("data get to see",getdata);
 
                 }catch(Exception e){
