@@ -45,29 +45,29 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(SeeApp);
                 //counter=counter +1;
                 //CounterText.setText(Integer.toString(counter));
-
-            }
-        });
-        //GET with okhttp
-        Request get = new Request.Builder().url("https://reqres.in/api/users?page=2").build();
-        client.newCall(get).enqueue(new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                e.printStackTrace();
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) {
-                try {
-                    ResponseBody responseBody = response.body();
-                    if (!response.isSuccessful()) {
-                        throw new IOException("Unexpected code " + response);
+                //GET with okhttp
+                Request get = new Request.Builder().url("https://reqres.in/api/users?page=2").build();
+                client.newCall(get).enqueue(new Callback() {
+                    @Override
+                    public void onFailure(Call call, IOException e) {
+                        e.printStackTrace();
                     }
 
-                    Log.i("data", ((ResponseBody) responseBody).string());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                    @Override
+                    public void onResponse(Call call, Response response) {
+                        try {
+                            ResponseBody responseBody = response.body();
+                            if (!response.isSuccessful()) {
+                                throw new IOException("Unexpected code " + response);
+                            }
+
+                            Log.i("data", ((ResponseBody) responseBody).string());
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+
             }
         });
 
