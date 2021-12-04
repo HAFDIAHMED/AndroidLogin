@@ -11,7 +11,9 @@
         android:theme="@style/Theme.MyLoginApp">
         <activity
             android:name=".authentification.RegisterActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/register_page"
+            />
         <activity
             android:name=".authentification.LoginActicity"
             android:exported="false"
