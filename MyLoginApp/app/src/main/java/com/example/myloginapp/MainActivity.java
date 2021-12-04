@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Button see_app;
     int counter=0;
     TextView CounterText;
-    OkHttpClient client = new OkHttpClient();
+    //OkHttpClient client = new OkHttpClient();
     public String url= "https://reqres.in/api/users/2";
     TextView TextApi = (TextView) findViewById(R.id.textApi);
 
@@ -46,30 +46,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    public class OkHttpHandler extends AsyncTask {
 
-        OkHttpClient client = new OkHttpClient();
-
-        @Override
-        protected String doInBackground(String...params) {
-
-            Request.Builder builder = new Request.Builder();
-            builder.url(params[0]);
-            Request request = builder.build();
-
-            try {
-                Response response = client.newCall(request).execute();
-                return response.body().string();
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-            TextApi.setText(s);
-        }
-    }
 }
