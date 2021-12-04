@@ -7,11 +7,12 @@
     tools:context=".authentification.LoginActicity">
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="409dp"
         android:layout_height="276dp"
+
+
         android:gravity="center"
-
-
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -45,5 +46,27 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="Login" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="406dp"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.253"
+        tools:layout_editor_absoluteX="1dp"
+        tools:ignore="MissingConstraints"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="369dp"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:gravity="center_horizontal"
+            />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
