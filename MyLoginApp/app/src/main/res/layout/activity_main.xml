@@ -12,7 +12,9 @@
         android:orientation="vertical"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="192dp">
+        tools:layout_editor_absoluteY="192dp"
+        android:gravity="center"
+        >
 
         <Button
             android:id="@+id/button2"
