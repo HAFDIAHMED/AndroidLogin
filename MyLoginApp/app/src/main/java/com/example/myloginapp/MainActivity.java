@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                      if(!response.isSuccessful()){
                          throw new IOException("unexpected code "+response);
                      }
-                     Log.i("data with ahmed",responseBody.string());
+                     Log.i("data with get",responseBody.string());
                 }catch(Exception e){
                     e.printStackTrace();
                 }
@@ -97,7 +97,25 @@ public class MainActivity extends AppCompatActivity {
                 .url("https://reqres.in/api/users")
                 .post(postBody)
                 .build();
-        
+        client.newCall(post).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
+                e.printStackTrace();
+            }
+
+            @Override
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                    try{
+                            ResponseBody responseBody=response.body() ;
+                            if(!response.isSuccessful()){
+                                throw new IOException("unexpected code "+ response);
+                            }
+                            Log.i("data posted",responseBody.string());
+                    }catch(Exception e){
+                        e.printStackTrace();
+                    }
+            }
+        });
 
 
 
