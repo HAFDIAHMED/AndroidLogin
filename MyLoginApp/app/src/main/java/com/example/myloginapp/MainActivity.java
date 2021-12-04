@@ -21,10 +21,10 @@ import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
     Button see_app;
-    int counter=0;
+    int counter = 0;
     TextView CounterText;
     //OkHttpClient client = new OkHttpClient();
-    public String url= "https://reqres.in/api/users/2";
+    public String url = "https://reqres.in/api/users/2";
     TextView TextApi = (TextView) findViewById(R.id.textApi);
 
     @Override
@@ -33,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
         see_app = findViewById(R.id.button2);
-        CounterText=findViewById(R.id.textcountr);
+        CounterText = findViewById(R.id.textcountr);
         see_app.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent SeeApp= new Intent(MainActivity.this, LoginActicity.class);
+                Intent SeeApp = new Intent(MainActivity.this, LoginActicity.class);
                 startActivity(SeeApp);
                 //counter=counter +1;
                 //CounterText.setText(Integer.toString(counter));
@@ -47,9 +47,10 @@ public class MainActivity extends AppCompatActivity {
         OkHttpClient client = new OkHttpClient();
 
 
-
-
     }
+
+    final OkHttpClient client = new OkHttpClient();
+
     String run(String url) throws IOException {
         Request request = new Request.Builder()
                 .url(url)
@@ -61,3 +62,4 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+}
