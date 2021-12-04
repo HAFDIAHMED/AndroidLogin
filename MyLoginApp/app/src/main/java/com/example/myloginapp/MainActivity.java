@@ -18,8 +18,9 @@ public class MainActivity extends AppCompatActivity {
         see_app.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent SeeApp= new Intent(MainActivity.this, LoginActicity.class);
-                startActivity(SeeApp);
+                //Intent SeeApp= new Intent(MainActivity.this, LoginActicity.class);
+                //startActivity(SeeApp);
+                see_app.setText("button test");
 
             }
         });
