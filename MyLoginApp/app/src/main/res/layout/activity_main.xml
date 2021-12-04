@@ -7,14 +7,14 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="407dp"
         android:layout_height="176dp"
+        android:gravity="center"
         android:orientation="vertical"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="192dp"
-        android:gravity="center"
-        >
+        tools:layout_editor_absoluteY="192dp">
 
         <Button
             android:id="@+id/button2"
@@ -24,4 +24,14 @@
             android:layout_marginRight="50dp"
             android:text="@string/see_app" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textcountr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="counter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="168dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
