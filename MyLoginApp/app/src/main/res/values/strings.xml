@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">MyLoginApp</string>
     <string name="see_app">see the login app</string>
+    <string name="login_page">Login Page</string>
+    <string name="register_page">Register Page</string>
 </resources>
