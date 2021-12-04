@@ -44,7 +44,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        OkHttpClient client = new OkHttpClient();
+        //OkHttpClient client = new OkHttpClient();
+
+        TextApi.setText(run(url));
 
 
     }
