@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                      }
 
 
-                    Log.i("data with get",responseBody.string());
+                    Log.i("data with get",getdata);
                      getdata=responseBody.string();
                      TextApi.setText(getdata);
                      Log.i("data get to see",getdata);
