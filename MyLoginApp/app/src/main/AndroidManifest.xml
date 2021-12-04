@@ -11,7 +11,9 @@
         android:theme="@style/Theme.MyLoginApp">
         <activity
             android:name=".authentification.LoginActicity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Login Page"
+            />
         <activity
             android:name=".MainActivity"
             android:exported="true">
