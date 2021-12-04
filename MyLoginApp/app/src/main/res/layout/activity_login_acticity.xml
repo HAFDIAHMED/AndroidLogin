@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:ems="10"
-            android:hint="@string/button_login"
+            android:hint="@string/user_name"
             android:inputType="textEmailAddress" />
 
         <EditText
@@ -61,18 +61,18 @@
 
         <TextView
             android:id="@+id/dontHaveAccount"
-            android:layout_width="369dp"
+            android:layout_width="283dp"
             android:layout_height="43dp"
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="@string/dont_have_account" />
+
         <TextView
             android:id="@+id/RegisterClick"
-            android:layout_width="369dp"
+            android:layout_width="145dp"
             android:layout_height="43dp"
             android:layout_weight="1"
-            
-            android:gravity="center_horizontal"
+            android:clickable="true"
             android:text="@string/register_text" />
 
     </LinearLayout>
