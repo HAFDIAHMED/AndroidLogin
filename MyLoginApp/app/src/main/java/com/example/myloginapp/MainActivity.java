@@ -1,5 +1,6 @@
 package com.example.myloginapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -57,9 +58,31 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        //make a client
+        OkHttpClient client = new OkHttpClient();
         //get request
         Request get = new Request.Builder()
-                .url("")
+                .url("https://reqres.in/api/users?page=2")
+                .build();
+        client.newCall(get).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
+                e.printStackTrace();
+            }
+
+            @Override
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                try{
+                     ResponseBody responseBody=response.body();
+                     if(!response.isSuccessful()){
+                         throw new IOException("unexpected code "+response);
+                     }
+                     Log.i("data with ahmed",responseBody.string());
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+        });
 
 
 
