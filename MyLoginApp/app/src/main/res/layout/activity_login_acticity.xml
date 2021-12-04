@@ -13,9 +13,11 @@
 
 
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="332dp">
+        tools:layout_editor_absoluteX="1dp">
 
         <EditText
             android:id="@+id/UsernameInput"
