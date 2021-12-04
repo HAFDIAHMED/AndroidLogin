@@ -15,10 +15,10 @@
 	
 	::Commit all changes with the message "auto push android". 
 	::Change as needed.
-	git commit -m "New Atlanta"
+	git commit -m "New push"
 	
 	::Push all changes to GitHub 
-	git push origin new_atlanta
+	git push origin 
 	
 	::Alert user to script completion and relaunch.
 	echo Complete. Relaunching...
