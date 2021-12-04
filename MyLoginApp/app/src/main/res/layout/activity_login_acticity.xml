@@ -60,11 +60,20 @@
         tools:layout_editor_absoluteX="4dp">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/dontHaveAccount"
             android:layout_width="369dp"
             android:layout_height="43dp"
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="@string/dont_have_account" />
+        <TextView
+            android:id="@+id/RegisterClick"
+            android:layout_width="369dp"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            
+            android:gravity="center_horizontal"
+            android:text="@string/register_text" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
