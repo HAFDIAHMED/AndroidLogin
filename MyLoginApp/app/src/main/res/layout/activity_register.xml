@@ -30,7 +30,7 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/PasswordInput"
+            android:id="@+id/PasswordInput1"
             android:layout_width="367dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -51,7 +51,7 @@
             />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button_register"
             android:layout_width="319dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
