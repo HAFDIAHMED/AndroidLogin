@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        String url= "https://reqres.in/api/users/2";
+
         setContentView(R.layout.activity_main);
         see_app = findViewById(R.id.button2);
         CounterText=findViewById(R.id.textcountr);
@@ -38,8 +40,9 @@ public class MainActivity extends AppCompatActivity {
         //create a http client
         OkHttpClient client = new OkHttpClient();
         TextView api_result_text=(TextView)findViewById(R.id.textApi);
-        String url= "https://reqres.in/api/users/2";
         //create an http handler
+        OkHttpHandler okHttpHandler= new OkHttpHandler();
+        okHttpHandler.execute(url);
 
 
     }
