@@ -10,37 +10,38 @@
         android:layout_width="409dp"
         android:layout_height="276dp"
         android:gravity="center"
+
+
         android:orientation="vertical"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="218dp">
+        tools:layout_editor_absoluteY="332dp">
 
         <EditText
             android:id="@+id/UsernameInput"
             android:layout_width="367dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="username"
             android:layout_marginTop="10dp"
-            />
+            android:ems="10"
+            android:hint="username"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/PasswordInput"
             android:layout_width="367dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Mot de passe"
             android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Mot de passe"
+            android:inputType="textPersonName"
 
             />
 
         <Button
             android:id="@+id/button"
-            android:layout_marginTop="20dp"
             android:layout_width="319dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="Login" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
