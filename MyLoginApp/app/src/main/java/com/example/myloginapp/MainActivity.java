@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     Button see_app;
     int counter = 0;
     TextView CounterText;
-    public String url = "https://reqres.in/api/users/2";
+    //public String url = "https://reqres.in/api/users/2";
     TextView TextApi = (TextView) findViewById(R.id.textApi);
 
     @Override
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        
+
 
 
 
