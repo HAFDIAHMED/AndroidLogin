@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //Intent SeeApp= new Intent(MainActivity.this, LoginActicity.class);
                 //startActivity(SeeApp);
-                //counter=counter +1;
-                see_app.setText(counter);
+                counter=counter +1;
+                CounterText.setText(Integer.toString());
 
             }
         });
