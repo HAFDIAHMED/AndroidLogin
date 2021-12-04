@@ -23,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
         see_app.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent SeeApp= new Intent(MainActivity.this, LoginActicity.class);
-                //startActivity(SeeApp);
-                counter=counter +1;
-                CounterText.setText(Integer.toString());
+                Intent SeeApp= new Intent(MainActivity.this, LoginActicity.class);
+                startActivity(SeeApp);
+                //counter=counter +1;
+                //CounterText.setText(Integer.toString(counter));
 
             }
         });
