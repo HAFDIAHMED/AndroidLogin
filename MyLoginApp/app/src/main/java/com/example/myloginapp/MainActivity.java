@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.myloginapp.authentification.LoginActicity;
 
+import org.json.JSONObject;
 import org.w3c.dom.Text;
 
 import java.io.IOException;
@@ -83,6 +84,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        //Post Data
+        JSONObject postData = new JSONObject();
+        
 
 
 
