@@ -9,19 +9,26 @@
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="276dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="200dp"
-        tools:ignore="MissingConstraints"
         android:gravity="center"
-        >
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="218dp">
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
-            android:layout_width="match_parent"
+            android:id="@+id/UsernameInput"
+            android:layout_width="367dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="username" />
+
+        <EditText
+            android:id="@+id/PasswordInput"
+            android:layout_width="367dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Mot de passe" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
