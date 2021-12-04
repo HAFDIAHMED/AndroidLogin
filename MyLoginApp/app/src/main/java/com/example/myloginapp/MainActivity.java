@@ -10,6 +10,10 @@ import android.widget.TextView;
 
 import com.example.myloginapp.authentification.LoginActicity;
 
+import org.w3c.dom.Text;
+
+import okhttp3.OkHttpClient;
+
 public class MainActivity extends AppCompatActivity {
     Button see_app;
     int counter=0;
@@ -30,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        //Api features
+        //create a http client
+        OkHttpClient client = new OkHttpClient();
+        TextView api_result_text=(TextView)findViewById(R.id.textApi);
+        
 
     }
 }
