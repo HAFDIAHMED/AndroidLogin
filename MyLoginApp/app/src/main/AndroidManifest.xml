@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myloginapp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,10 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLoginApp">
         <activity
+            android:name=".ListItemsActivity"
+            android:exported="false"
+            android:label="List Of Items" />
+        <activity
             android:name=".authentification.RegisterActivity"
             android:exported="false"
-            android:label="@string/register_page"
-            />
+            android:label="@string/register_page" />
         <activity
             android:name=".authentification.LoginActicity"
             android:exported="false"

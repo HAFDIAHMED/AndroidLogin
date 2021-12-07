@@ -27,6 +27,8 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.JsonObject;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     //public String url = "https://reqres.in/api/users/2";
     TextView TextApi ;
     String getdata="data get";
+    FloatingActionButton floatbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +51,15 @@ public class MainActivity extends AppCompatActivity {
         api_result_button=findViewById(R.id.apibutton);
         CounterText = findViewById(R.id.textcountr);
         TextApi=findViewById(R.id.textApi);
+
+        floatbutton=findViewById(R.id.floatingActionButton);
+
+        floatbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "I am a floating button", Toast.LENGTH_SHORT).show();
+            }
+        });
         see_app.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,10 +70,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        api_result_button.setText("see items");
+
         api_result_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextApi.setText(getdata);
+               Intent ListItemsACT= new Intent(MainActivity.this,ListItemsActivity.class);
+               startActivity(ListItemsACT);
 
             }
         });
@@ -89,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
                     Log.i("data with get",getdata);
                      getdata=responseBody.string();
-                     TextApi.setText(getdata);
+                     //TextApi.setText(getdata);
                      Log.i("data get to see",getdata);
 
                 }catch(Exception e){

@@ -10,4 +10,16 @@
     <string name="dont_have_account">You dont have an account ?</string>
     <string name="register_text">Register</string>
 
+    <string-array name="Company">
+        <item>Evon</item>
+        <item>HCL</item>
+        <item>HP</item>
+        <item>Ericsson</item>
+        <item>TCS</item>
+        <item>Dell</item>
+        <item>Microsoft</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

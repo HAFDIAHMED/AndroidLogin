@@ -31,6 +31,7 @@
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:text="api results" />
+
     </LinearLayout>
 
     <TextView
@@ -47,7 +48,7 @@
         android:id="@+id/textApi"
         android:layout_width="109dp"
         android:layout_height="23dp"
-        android:text="api results"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.485"
@@ -55,4 +56,6 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.631"
         tools:ignore="MissingConstraints" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
